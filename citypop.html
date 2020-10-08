@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2020671003-이기욱</title>
+    <script src="https://kit.fontawesome.com/768822f290.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header-img {
+            width: 50px;
+            filter: invert(100%);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            height: 7%;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            border-bottom: 1px white solid;
+            background-color: #343a40;
+            opacity: 0.8;
+            background-attachment: fixed;
+            position: fixed;
+            top: 9;
+        }
+
+        header div .nav1 {
+            position: absolute;
+        }
+
+        header div .nav1 .subnav {
+            position: relative;
+        }
+
+        /*-----------------------------드롭다운----------------------*/
+        header .dropdown {
+            display: inline-block;
+            position: relative;
+            list-style: none;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header .dropdown:not(:last-child) {
+            border-right: 1px white solid;
+        }
+
+        header .dropdown a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            border: none;
+            background-color: gray;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            width: 150px;
+        }
+
+        header .dropdown-content li:not(:last-child) {
+            padding-bottom: 10px;
+        }
+
+        header .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        header .dropdown:hover .dropdown-content li:hover {
+            text-decoration: underline;
+        }
+
+        .section-main {
+            min-height: 100vh;
+            position: relative;
+            background-image: url(https://images4.alphacoders.com/380/38094.jpg);
+            background-size: cover;
+            opacity: 0.9;
+            color: white;
+            padding: 100px;
+        }
+
+        .section-main h1 {
+            padding: 300px 0 70px;
+            font-size: 50px;
+        }
+
+        .section-main h2 {
+            width: 60%;
+            color: white;
+            padding-bottom: 30px;
+            text-align: left;
+        }
+
+        .section-main>.subtitle {
+            display: inline-block;
+            position: absolute;
+            animation: appear 3s;
+            left: 100px;
+        }
+
+        @keyframes appear {
+            from {
+                left: -1000px;
+            }
+
+            to {
+                left: 100px;
+            }
+        }
+
+
+        section {
+            height: 100vh;
+            padding: 100px 70px 70px 100px;
+            background-image: url(https://pgnqdrjultom1827145.cdn.ntruss.com/img/ae/59/ae598ca87605c561d35dbdb4cbe881b93067af9b6ae9f58f69fb97540c3dde60_v1.jpg);
+            background-size: cover;
+        }
+
+        /* 푸터 */
+        footer {
+            display: flex;
+            height: 100px;
+            justify-content: space-around;
+            background-color: lightslategray;
+            align-items: center;
+            color: white;
+        }
+
+        footer table {
+            border-spacing: 10px;
+        }
+
+        footer .streaming {
+            width: 10%;
+        }
+
+        footer .streaming a img {
+            width: 10px;
+            height: 10px;
+        }
+
+        footer p a {
+            text-decoration: none;
+        }
+
+        footer p a i {
+            color: white;
+            width: 30px;
+            font-size: 20px;
+        }
+
+        footer p a i .upd-history {
+            margin: 0 100px;
+        }
+
+        .table {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        table {
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        .contact {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 8px;
+        }
+
+        .side {
+            display: scroll;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: gray;
+            font-size: 20px;
+        }
+
+        /* 섹션 내부 */
+        .musiclist {
+            height: 720px;
+            width: 300px    ;
+            float: right;
+            border: black solid 1px;
+            margin-right: 100px;
+            text-align: center;
+            font-style: italic;
+            background-color: lightgray;
+        }
+
+        .musiclist a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .musiclist a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .musiclist a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+    </style>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img class="header-img"
+                    src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_queue_music_48px-512.png"
+                    alt="music-icon" /></a>
+        </div>
+
+        <nav>
+            <div class="dropdown">
+                <li class="navpop"><a href="pop.html">POP</a></li>
+                <div class="dropdown-content">
+                    <li><a href="">케이팝</a></li>
+                    <li><a href="">일렉트로팝</a></li>
+                    <li><a href="citypop.html">시티팝</a></li>
+                    <li><a href="index.html#pop">오늘의 팝</a></li>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <li class="dropbtn"><a href="edm.html">EDM</a></li>
+                <div class="dropdown-content">
+                    <li>
+                        <a href="">프로그레시브<br />하우스</a>
+                    </li>
+                    <li><a href="">일렉트로 하우스</a></li>
+                    <li><a href="">트랩</a></li>
+                    <li><a href="">덥스텝</a></li>
+                    <li><a href="">하드 스타일</a></li>
+                    <li><a href="index.html#EDM">오늘의 EDM</a></li>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <li class="dropbtn"><a href="hip-hop.html">HIP-HOP</a></li>
+                <div class="dropdown-content">
+                    <li><a href="">붐뱁</a></li>
+                    <li><a href="">트랩</a></li>
+                    <li><a href="">래칫</a></li>
+                    <li><a href="">갱스터랩</a></li>
+                    <li><a href="">클라우드 랩</a></li>
+                    <li><a href="index.html#HIP-HOP">오늘의 힙합</a></li>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <li class="dropbtn"><a href="ballad.html">BALLAD</a></li>
+                <div class="dropdown-content">
+                    <li><a href="">남성 발라드</a></li>
+                    <li><a href="">여성 발라드</a></li>
+                    <li><a href="index.html#balad">오늘의 발라드</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section-main">
+        <h1 class="title">CITY POP</h1>
+        <h2 class="subtitle">
+            70~80년대 경제 성장시기의 일본에서 유행한 음악 기조이자 기조상으로 따지면 시부야계의 아버지뻘.<br>
+            이름에 걸맞는 도시적이고 세련된 분위기가 특징이다. 
+        </h2>
+    </section>
+
+    <section>
+        <iframe width="1280px" height="720px" name="youtube" frameborder="0"></iframe>
+
+        <div class="musiclist">
+            <h2 style="font-style: normal;">시티팝 리스트</h2>
+            <hl style="font-style: normal; font-size: 5px;">클릭하면 영상이 보입니다.</hl>
+            <br>
+            <hr style="border:black solid 1px;">
+            <br>
+            <a href="https://www.youtube.com/embed/x8SUn1YDud8" target="youtube">dosii - lovememore.</a><br>
+            <br>
+            <a href="https://youtube.com/embed/3JeNVo6wxaw" target="youtube">dosii - Orbit of yours</a><br>
+            <br>
+            <a href="https://youtube.com/embed/67jSYCSrnE4" target="youtube">YUKIKA - NEON</a><br>
+            <br>
+            <a href="https://youtube.com/embed/UUiTiUwl5ew" target="youtube">YUKIKA - Cherries Jubiles</a><br>
+            <br>
+            <a href="https://youtube.com/embed/_lEviJh5Iwk" target="youtube">Kim Areum - Cross The Line</a><br>
+            <br>
+            <a href="https://youtube.com/embed/_6Jt37B0CYQ" target="youtube">Lay.bn - ℃ (prod. Noden)</a><br>
+            <br>
+            <a href="https://youtu.be/jiVYkDYn--U">SHAUN - Terminal<sub style="font-size:3px;">iframe failed</sub></a><br>
+            <br>
+            <a href="https://youtu.be/rCv47UOoR18">SHAUN - Moon<sub style="font-size:3px;">iframe failed</sub></a><br>
+            <br>
+            <a href="https://youtube.com/embed/NaJpEtZ_JiY" target="youtube">BehindtheMoon - 너만의 나</a><br>
+            <br>
+            <a href="https://youtube.com/embed/kAHOUX1PUJM" target="youtube">MIYAO - Key</a><br>
+            <br>
+            <a href="https://youtube.com/embed/k6a8AqQyj1U" target="youtube">JD - Smile</a><br>
+            <br>
+            <a href="" target="youtube"></a><br>
+            <br>
+            <a href="" target="youtube"></a><br>
+            <br>
+            <a href="" target="youtube"></a><br>
+            <br>
+            <a href="" target="youtube"></a><br>
+            <br>
+            <a href="" target="youtube"></a><br>
+            <br>
+
+        </div>
+    </section>
+
+
+
+
+    <footer>
+
+        <div>
+            <div>Music Collection</div>
+            <div>This page is introucing about few types of songs</div>
+            <div class="contact">Copyright © 2020&nbsp;&nbsp;|&nbsp; &nbsp;Lee ki wook&nbsp; &nbsp;|&nbsp;
+                &nbsp;tizmfns1218@naver.com</div>
+        </div>
+        <p>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            <a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a class="upd-history" href=""><i class="fas fa-bars"></i></a></span>
+        </p>
+    </footer>
+</body>
+
+</html>
